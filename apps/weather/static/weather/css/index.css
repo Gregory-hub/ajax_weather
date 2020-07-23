@@ -1,0 +1,88 @@
+div {
+    /* border: 1px solid #242d32; */
+
+    margin: 10px;
+}
+
+header {
+    height: 100px;
+}
+
+.move {
+    height: 1px;
+    width: 98%;
+    background: #000;
+    animation-name: moveline;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+}
+
+@keyframes moveline {
+    from {
+        width: 0;
+    }
+}
+
+.wrap {
+    height: 300px;
+    display: flex;
+    max-width: 800px;
+    margin: auto;
+}
+
+.crutch {
+    width: 100%;
+    margin: auto;
+}
+
+.form {
+    vertical-align: center;
+    float: left;
+    height: 40px;
+}
+
+.city {
+    vertical-align: center;
+    float: right;
+    margin-right: 50px;
+    padding: 10px;
+}
+
+.temperature {
+    vertical-align: center;
+    float: right;
+    margin-right: 50px;
+    padding: 10px;
+    
+}
+
+.form input[type="text"] {
+    height: 34px;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+form input[type="text"]:focus {
+    outline: none;
+    background: #edeeee;
+}
+
+.form input[type="submit"] {
+    background: #edeeee;
+    height: 38px;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.form input[type="submit"]:hover {
+    cursor: pointer;
+    background: #e2e1e1;
+}
+
+.form input[type="submit"]:focus {
+    outline: none;
+}

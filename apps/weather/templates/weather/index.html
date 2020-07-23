@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'weather/css/index.css' %}">
+</head>
+<body>
+
+    <header>
+        <div class="move"></div>
+    </header>
+
+    <div class="wrap">
+        <div class="crutch">
+            <div class="form">
+                <form name="city_form">
+                    <input type="text" name="request_city" autocomplete="off">
+                    <input type="submit" class="submit">
+                </form>
+            </div>
+
+            <div class="temperature"></div>
+            <div class="city"></div>
+            <div class="time"></div>
+        </div>
+    </div>
+
+    <script src="{% static 'weather/js/script.js' %}"></script>
+</body>
+</html>
