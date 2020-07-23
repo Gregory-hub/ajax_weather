@@ -12,7 +12,6 @@ def capitalize_city_name(city_name):
 
     city_name = ' '.join(name_parts)
 
-    print(city_name)
     return city_name
 
 
@@ -42,6 +41,5 @@ def get_temperature(city_name):
     response = requests.get('http://api.openweathermap.org/data/2.5/weather?id={0}&appid={1}'.format(city_id, token))
     K_temp = json.loads(response.text)['main']['temp']
     temp = round(K_temp - 273.15, 1)
-    print(temp)
 
     return temp

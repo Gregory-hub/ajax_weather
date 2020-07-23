@@ -41,7 +41,17 @@ header {
     height: 40px;
 }
 
+.helper_city {
+    margin: 0;
+    width: 500px;
+    float: right;
+    display: block;
+    height: 24px;
+}
+
 .city {
+    margin-top: 0;
+    display: block;
     vertical-align: center;
     float: right;
     margin-right: 50px;
@@ -49,14 +59,17 @@ header {
 }
 
 .temperature {
+    margin-top: 0;
+    display: block;
     vertical-align: center;
     float: right;
     margin-right: 50px;
     padding: 10px;
-    
+
 }
 
 .form input[type="text"] {
+    display: inline-block;
     height: 34px;
     border-right: 1px solid white;
     border-left: 1px solid white;
@@ -64,7 +77,7 @@ header {
     border-bottom: 1px solid black;
 }
 
-form input[type="text"]:focus {
+.form input[type="text"]:focus {
     outline: none;
     background: #edeeee;
 }
@@ -85,4 +98,8 @@ form input[type="text"]:focus {
 
 .form input[type="submit"]:focus {
     outline: none;
+}
+
+label {
+    display: block;
 }
