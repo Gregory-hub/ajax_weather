@@ -8,12 +8,13 @@ from .models import City
 
 
 def capitalize_city_name(city_name):
+    if not isinstance(city_name, str):
+        return None
     name_parts = [word.capitalize() for word in city_name.split(' ')]
 
     city_name = ' '.join(name_parts)
 
     return city_name
-
 
 
 def get_city_id(city_name):
@@ -39,7 +40,11 @@ def get_temperature(city_name):
         return None
 
     response = requests.get('http://api.openweathermap.org/data/2.5/weather?id={0}&appid={1}'.format(city_id, token))
-    K_temp = json.loads(response.text)['main']['temp']
+    if response.status_code == 404:
+        return None
+
+    response_text = json.loads(response.text)
+    K_temp = response_text.get('main').get('temp')
     temp = round(K_temp - 273.15, 1)
 
     return temp

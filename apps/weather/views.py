@@ -10,8 +10,6 @@ def index(request):
 
 
 def ajax(request):
-    """ajax view"""
-
     city = request.GET.get('request_city', default=None)
     if city == '':
         city = None
