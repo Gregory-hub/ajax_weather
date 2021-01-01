@@ -19,9 +19,6 @@ document.forms.city_form.onsubmit = function(e){
                 let city = response['city']
                 let temperature = response['temperature']
 
-                console.log("City:", city)
-                console.log("Temperature:", temperature)
-
                 if(city !== null){
                     responseCity.style = 'border-top: 1px solid black; border-bottom: 1px solid black;'
                     responseTemperature.style = 'border-top: 1px solid black; border-bottom: 1px solid black;'
